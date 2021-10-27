@@ -1,0 +1,32 @@
+<%= form_with(model: usermaildatum) do |form| %>
+  <% if usermaildatum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(usermaildatum.errors.count, "error") %> prohibited this usermaildatum from being saved:</h2>
+
+      <ul>
+        <% usermaildatum.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :username %>
+    <%= form.text_field :username %>
+  </div>
+
+  <div class="field">
+    <%= form.label :useremail %>
+    <%= form.text_field :useremail %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

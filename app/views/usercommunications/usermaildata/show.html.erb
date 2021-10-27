@@ -1,0 +1,25 @@
+<body>
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Username:</strong>
+    <%= @usermaildatum.username %>
+  </p>
+
+  <p>
+    <strong>Useremail:</strong>
+    <%= @usermaildatum.useremail %>
+  </p>
+
+  <p>
+    <strong>Content:</strong>
+    <%= @usermaildatum.content %>
+  </p>
+
+  <%= link_to 'Edit', edit_usermaildatum_path(@usermaildatum) %> |
+  <%= link_to 'Back', usermaildata_path %>
+</body>
+
+<style>
+
+</style>
